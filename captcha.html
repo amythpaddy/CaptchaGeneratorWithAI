@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CAPTCHA Generator</title>
+    <script src="./captcha.js"></script>
+    <link rel="stylesheet" href="./captcha.css" />
+  </head>
+  <body>
+    <img id="captchaImage" src="" />
+    <div>
+      <label for="widthInput">Width:</label>
+      <input type="number" id="widthInput" min="50" value="200" />
+    </div>
+    <div>
+      <label for="heightInput">Height:</label>
+      <input type="number" id="heightInput" min="50" value="50" />
+    </div>
+    <select id="fontSelect">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Courier New">Courier New</option>
+    </select>
+    <input type="color" id="textColorPicker" />
+    <input type="color" id="backgroundColorPicker" />
+    <button onclick="generateCaptcha()">Generate CAPTCHA</button>
+    <input type="text" id="captchaInput" placeholder="Enter CAPTCHA" />
+    <button onclick="verifyCaptcha()">Verify</button>
+    <a id="downloadLink" onclick="downloadCaptcha()" href="#">Download Text</a>
+  </body>
+</html>
